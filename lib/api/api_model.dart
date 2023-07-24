@@ -1,3 +1,7 @@
+///Created by: Godslove Lee
+///Last edited: 25.07.2023
+///Description: Api model class: this class sends the Request to the EFA server and Manages the Error handling
+
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
