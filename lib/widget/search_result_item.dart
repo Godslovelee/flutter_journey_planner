@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:mentz_coding_challenge/api/api_model.dart';
 
 class JourneyPlanningApp extends StatefulWidget {
+  const JourneyPlanningApp({super.key});
+
   @override
   _JourneyPlanningAppState createState() => _JourneyPlanningAppState();
 }
