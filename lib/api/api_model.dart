@@ -1,15 +1,17 @@
-
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'package:mentz_coding_challenge/consts/api_consts.dart';
+
 class SearchAPI {
-  static Future<List<Map<String, dynamic>>> searchForMatches(String searchQuery) async {
+  static Future<List<Map<String, dynamic>>> searchForMatches(
+      String searchQuery) async {
     if (searchQuery.isEmpty) {
       return []; // Return an empty list if the search query is empty
     }
 
     final String url =
-        'https://mvvvip1.defas-fgi.de/mvv/XML_STOPFINDER_REQUEST?language=de&outputFormat=RapidJSON&type_sf=any&name_sf=$searchQuery';
+        '$baseUrl?language=de&outputFormat=RapidJSON&type_sf=any&name_sf=$searchQuery';
 
     final response = await http.get(Uri.parse(url));
 
@@ -29,7 +31,4 @@ class SearchAPI {
       return [];
     }
   }
-
-
-
-  }
+}
