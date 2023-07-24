@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../api/api_model.dart';
+import 'package:mentz_coding_challenge/api/api_model.dart';
 
 class JourneyPlanningApp extends StatefulWidget {
   @override
@@ -39,7 +38,7 @@ class _JourneyPlanningAppState extends State<JourneyPlanningApp> {
           children: [
             TextField(
               controller: _searchController,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Enter starting point',
               ),
               onSubmitted: (_) => _searchForMatches(),
