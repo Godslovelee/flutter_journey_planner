@@ -1,3 +1,7 @@
+///Created by: Godslove Lee
+///Last edited: 25.07.2023
+///Description: Search result Widget to display the query inputted in the text controller
+
 import 'package:flutter/material.dart';
 import 'package:mentz_coding_challenge/api/api_model.dart';
 
@@ -45,7 +49,7 @@ class _JourneyPlanningAppState extends State<JourneyPlanningApp> {
             ),
             SizedBox(height: 20),
             _isLoading // Show the loading indicator if _isLoading is true
-                ? CircularProgressIndicator()
+                ? const CircularProgressIndicator()
                 : Expanded(
                     child: ListView.builder(
                       itemCount: _searchResults.length,
